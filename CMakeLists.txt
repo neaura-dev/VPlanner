@@ -28,7 +28,9 @@ add_executable(
 add_executable(
     VPlannerTests
     tests/TimeRangeTests.cpp
+    tests/TaskTests.cpp
     src/domain/TimeRange.cpp
+    src/domain/Task.cpp
 )
 
 target_link_libraries(

@@ -1,4 +1,6 @@
 #include <stdexcept>
+#include <algorithm>
+#include <cctype>
 #include "Task.hpp"
 
 Task::Task(
@@ -53,7 +55,7 @@ void Task::set_title(std::string title) {
 }
 
 void Task::set_description(std::string description) {
-    description_ = description;
+    description_ = std::move(description);
 }
 
 void Task::set_priority(TaskPriority priority) {
