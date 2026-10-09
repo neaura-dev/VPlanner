@@ -34,7 +34,7 @@ public:
     TaskPriority priority() const;
     TaskStatus status() const;
     std::chrono::minutes estimated_duration() const;
-    const std::optional<TimePoint> deadline() const;
+    const std::optional<TimePoint>& deadline() const;
 
     void set_title(std::string title);
     void set_description(std::string description);
